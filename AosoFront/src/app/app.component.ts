@@ -15,8 +15,6 @@ const httpOptions = {
   styleUrls: ['./app.component.css']
 })
 
-
-
 export class AppComponent implements OnInit{
   title = 'Hello DevOps team,';
   weatherList: any[] = [];
@@ -29,7 +27,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
 
-    this.http.get<any[]>('http://localhost:4000/WeatherForecast', httpOptions).subscribe(
+    this.http.get<any[]>('http://localhost:4003/WeatherForecast', httpOptions).subscribe(
       res => {
         this.weatherList = res;
         console.log('helooo',res);
